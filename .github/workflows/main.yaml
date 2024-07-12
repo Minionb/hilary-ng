@@ -33,7 +33,7 @@ jobs:
           name: build
           path: build
       - name: Deploy to firebase
-        uses: Ambient-Team/ambient-fintech@main
+        uses: Minionb/hilary-ng@main
         with:
           args: deploy --only hosting
         env:
