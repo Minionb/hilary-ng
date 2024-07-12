@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to firebase
         uses: Ambient-Team/ambient-fintech@main
         with:
-        args: deploy --only hosting
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
