@@ -1,4 +1,4 @@
-name: Deply to Firebase
+name: Deploy to Firebase
 on:
   pull_request:
     branches: [main]
