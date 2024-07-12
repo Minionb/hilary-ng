@@ -16,7 +16,7 @@ jobs:
           CI: false
         run: npm run build
       - name: Archive Production Artifact
-        uses: actions/upload-artiact@v2
+        uses: actions/upload-artfact@v2
         with:
           name: build
           path: build
