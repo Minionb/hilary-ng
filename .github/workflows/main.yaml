@@ -20,23 +20,23 @@ jobs:
         with:
           name: build
           path: build
-    deploy:
-      name: Deploy
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repo
-          uses: actions/checkout@2.3.2
-        - name: Download Artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: build
-            path: build
-        - name: Deploy to firebase
-          uses: Ambient-Team/ambient-fintech@main
-          with:
-          args: deploy --only hosting
-          env:
-            FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@2.3.2
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Deploy to firebase
+        uses: Ambient-Team/ambient-fintech@main
+        with:
+        args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
         
